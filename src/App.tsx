@@ -6,10 +6,8 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <SwipeButton/>
-      <button>
-        Right swipe
-      </button>
+      <SwipeButton title="left swipe"/>
+      <SwipeButton title="right swipe"/>
     </div>
   );
 }

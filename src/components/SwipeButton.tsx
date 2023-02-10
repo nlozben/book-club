@@ -1,9 +1,14 @@
 import React from "react"
 
-const SwipeButton = () => {
+type Props = {
+  title: string;
+}
+
+const SwipeButton = ({ title }: Props) => {
+
   return (
     <button>
-      Left swipe
+      {title}
     </button>
   )
 }
