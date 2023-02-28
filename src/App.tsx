@@ -1,11 +1,17 @@
 import React from 'react';
-import Home from './components/Home'
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { getApp } from './utils/helpers';
 
 const App = () => {
+
+  const CurrentApp = getApp();
+
   return (
     <div className="App">
-      <Home />
+      <BrowserRouter>
+        <CurrentApp />
+      </BrowserRouter>
     </div>
   );
 }
