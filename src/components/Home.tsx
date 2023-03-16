@@ -9,8 +9,8 @@ const Home = () => (
 			<ProfilePic />
 		</Grid>
 		<Grid item>
-			<SwipeButton title="left swipe"/>
-			<SwipeButton title="right swipe"/>
+			<SwipeButton title="💀"/>
+			<SwipeButton title="❤️"/>
 		</Grid>
 	</Grid>
 );

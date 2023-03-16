@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from '@mui/material';
 
 type Props = {
   title: string;
@@ -7,9 +8,9 @@ type Props = {
 const SwipeButton = ({ title }: Props) => {
 
   return (
-    <button>
+    <Button size="large">
       {title}
-    </button>
+    </Button>
   )
 }
 
