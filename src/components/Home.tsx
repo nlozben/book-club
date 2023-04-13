@@ -1,12 +1,12 @@
 import React from 'react';
-import ProfilePic from './ProfilePic'
-import SwipeButton from './SwipeButton'
+import UserProfile from './UserProfile/UserProfile';
+import SwipeButton from './SwipeButton';
 import { Grid } from "@mui/material";
 
 const Home = () => (
 	<Grid container direction="column" spacing={2}>
 		<Grid item>
-			<ProfilePic />
+			<UserProfile />
 		</Grid>
 		<Grid item>
 			<SwipeButton title="💀"/>
