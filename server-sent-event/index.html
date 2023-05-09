@@ -9,15 +9,9 @@ function start() { // when "Start" button pressed
     return;
   }
 
-  // eventSource = new EventSource('digits');
-  // eventSource = new EventSource('http://localhost:8080/digits');
   eventSource = new EventSource('http://localhost:8080/digits', {
     withCredentials: true,
   });
-  // evtSource = new EventSource("//api.example.com/ssedemo.php", {
-  //   withCredentials: true,
-  // });
-
 
   eventSource.onopen = function(e) {
     log("Event: open");
