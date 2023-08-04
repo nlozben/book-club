@@ -9,7 +9,7 @@ function start() { // when "Start" button pressed
     return;
   }
 
-  eventSource = new EventSource('http://localhost:8080/digits', {
+  eventSource = new EventSource('http://localhost:8080/populate_dialer', {
     withCredentials: true,
   });
 
@@ -44,9 +44,24 @@ function log(msg) {
   logElem.innerHTML += msg + "<br>";
   document.documentElement.scrollTop = 99999999;
 }
+
+function send() {
+  fetch('http://localhost:3000/customer', {
+    method: "POST",
+    body: JSON.stringify({
+      name: document.getElementById('name').value,
+      phoneNumber: document.getElementById('phoneNumber').value,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  });
+}
+
 </script>
 
-<button onclick="start()">Start</button> Press the "Start" to begin.
 <div id="logElem" style="margin: 6px 0"></div>
-
-<button onclick="stop()">Stop</button> "Stop" to finish.
+<h1>HCP web application (sender)</h1>
+Name: <input type="text" id="name" name="name" /> <br />
+Phone Number: <input type="text" id="phoneNumber" name="phoneNumber" /> <br />
+<button onclick="send()">send</button>
